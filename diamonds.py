@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from sklearn.metrics import mean_squared_error
+import numpy as np
 
 in_file=st.file_uploader('Coloque aqui o seu arquivo csv')
 correct_diamonds= pd.read_csv('data/rick_diamonds_gabarito.csv')
@@ -11,5 +12,5 @@ except:
 else:
     t=test_diamonds[0:4000]
     c=correct_diamonds[0:4000]
-    m=mean_squared_error(c['price'], t['price_predicted'])
+    m=np.sqrt(mean_squared_error(c['price'], t['price_predicted']))
     st.write(f'Your mean squared error is {m}')
