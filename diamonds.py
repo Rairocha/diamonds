@@ -17,10 +17,10 @@ else:
     st.write(f'Your mean squared error is {m}')
     if m <900:
         st.balloons()
-    #if st.checkbox("Final Score"):
-    #    t2=test_diamonds[4000:5000]
-    #    c2=correct_diamonds[4000:5000]
-    #    m2=np.sqrt(mean_squared_error(c2['price'], t2['price_predicted']))
-    #    st.write(f'Your real mean squared error is {m2}')
-    #    if m2 <900:
-    #        st.balloons()
+    if st.checkbox("Final Score"):
+        t2=test_diamonds[4000:5000]
+        c2=correct_diamonds[4000:5000]
+        m2=np.sqrt(mean_squared_error(c2['price'], t2['price_predicted']))
+        st.write(f'Your real mean squared error is {m2}')
+        if m2 <900:
+            st.balloons()
