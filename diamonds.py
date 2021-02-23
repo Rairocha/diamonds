@@ -9,7 +9,7 @@ correct_diamonds= pd.read_csv('data/rick_diamonds_gabarito.csv')
 try:
     test_diamonds=pd.read_csv(in_file)
 except:
-    st.write('Por favor coloque um arquivo csv abestado')
+    st.write('Coloque aqui o csv de diamantes do rick')
 else:
     t=test_diamonds[0:4000]
     c=correct_diamonds[0:4000]
