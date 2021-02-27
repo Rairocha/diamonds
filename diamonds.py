@@ -14,7 +14,7 @@ else:
     t=test_diamonds[0:4000]
     c=correct_diamonds[0:4000]
     m=np.sqrt(mean_squared_error(c['price'], t['price_predicted']))
-    st.write(f'Your mean squared error is {m}')
+    st.write(f'Your root mean squared error is {m}')
     if m <900:
         st.balloons()
     #if st.checkbox("Final Score"):
